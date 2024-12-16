@@ -26,162 +26,478 @@ Validate the HTML code.
 Publish the website in the given URL.
 
 # PROGRAM:
+Restaurent.html:
 ~~~
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Delicious Restaurant</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Welcome to <i>French Restaurent</i></title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
             text-align: center;
-            padding: 10px 0;
+            background-image: url('back.jpg');
+            background-size: cover;
+            background-attachment: fixed;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-        }
-        nav a {
+        .banner {
+            background-color: rgba(4, 7, 49, 0.9);
+            padding: 15px;
             color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
         }
-        nav a:hover {
-            background-color: #575757;
+        .nav-links {
+            list-style-type: none;
+            padding: 0;
+            background-color: #373c6f;
+            margin: 0;
+            overflow: hidden;
         }
-        .section {
-            padding: 20px;
-            text-align: center;
+        .nav-links li {
+            display: inline;
+            margin: 0;
         }
-        .menu-item {
+        .nav-links a {
             display: inline-block;
-            width: 30%;
-            padding: 10px;
-            margin: 10px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .menu-item img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .footer {
-            background-color: #333;
+            padding: 8px 12px;
             color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            background-color: #264653;
+        }
+        .welcome-section, .features-section {
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 10px auto;
+            width: 70%;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #264653;
+            color: white;
+            padding: 8px;
+            position: relative;
             bottom: 0;
             width: 100%;
         }
-        .reservation-form input, .reservation-form textarea {
-            width: 80%;
-            padding: 10px;
-            margin: 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
+        .food-images {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 15px 0;
         }
-        .reservation-form button {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .reservation-form button:hover {
-            background-color: #555;
+        .food-images img {
+            width: 180px;
+            height: auto;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <div class="banner">
+        <h1><i>Welcome to French Restaurent</i></h1>
+        <p>Where taste meet excellency!</p>
+    </div>
 
-    <header>
-        <h1>French Restaurant</h1>
-        <p>Where every meal is a delight!</p>
-    </header>
+    <!-- Navigation Bar -->
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="admin.html">Administration</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
-        <a href="#reservation">Reservation</a>
-    </nav>
-
-    <section id="home" class="section">
-        <h2>Welcome to French Restaurant</h2>
-        <p>We offer an exquisite dining experience with the finest ingredients and a warm atmosphere.</p>
-    </section>
-
-    <section id="menu" class="section">
-        <h2>Our Menu</h2>
-        <div class="menu-item">
-            <img src="C:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-02 075845.png" alt="Dish 1">
-            <h3>Cassoulet</h3>
-            <p>A stew from Languedoc, southwest France, that combines white beans with meat</p>
-            <p>$15.99</p>
-        </div>
-        <div class="menu-item">
-            <img src="C:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-02 075010.png" alt="Dish 2">
-            <h3>Bouillabaisse</h3>
-            <p>A traditional stew made by boiling various types of fish, often served with a sauce called rouille. </p>
-            <p>$12.99</p>
-        </div>
-        <div class="menu-item">
-            <img src="C:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-02 075030.png" alt="Dish 3">
-            <h3>Gratin dauphinois</h3>
-            <p>A regional dish made with potatoes and crème fraîche. </p>
-            <p>$20.99</p>
-        </div>
-    </section>
-
-    <section id="about" class="section">
+    <!-- Main Content Section -->
+    <div class="welcome-section">
         <h2>About Us</h2>
-        <p>French Restaurant has been serving the finest cuisine for over 20 years. Our chefs specialize in fresh, local ingredients and bring a unique twist to classic dishes.</p>
-    </section>
+        <p>At FRENCH RESTAURENT, we are committed to serving delicious, fresh, and delightful meals to tantalize your taste buds. Join us for an unforgettable dining experience.</p>
+    </div>
 
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <p>Email: contact@Frenchrestaurant.com</p>
-        <p>Phone: +123 456 7890</p>
-        <p>Address: 123 Flavor St, Food City</p>
-    </section>
+    <div class="features-section">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>Authentic and fresh ingredients.</li>
+            <li>Friendly and professional staff.</li>
+            <li>A warm and inviting atmosphere.</li>
+        </ul>
+    </div>
 
-    <section id="reservation" class="section reservation-form">
-        <h2>Make a Reservation</h2>
-        <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required><br>
-            <input type="email" name="email" placeholder="Your Email" required><br>
-            <input type="number" name="phone" placeholder="Your Phone Number" required><br>
-            <input type="date" name="date" required><br>
-            <textarea name="message" placeholder="Special Requests" rows="4"></textarea><br>
-            <button type="submit">Book Now</button>
-        </form>
-    </section>
-
-   
-
+    <!-- Food Images Section -->
+    <div class="food-images">
+        <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 174633.png" alt="Delicious Food 1">
+        <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 174726.png" alt="Delicious Food 2">
+        <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 174834.png" alt="Delicious Food 3">
+    </div>
 </body>
 </html>
 ~~~
+Menu.html:
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Our Specialties</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        h2 {
+            background-color: #473b88;
+            color: white;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        caption {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Our Specialties</h2>
+    <table>
+        <caption>Our Menu Items</caption>
+        <tr>
+            <td><img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 175846.png" alt="Food Item 1"></td>
+            <td>
+                <h3>1.Boeuf bourguignon</h3>
+                <p>Boeuf bourguignon is a great example of budget cuts of meat being turned into stylish haute cuisine. For authenticity, be sure to use a Burgundian pinot noir for this recipe.</p>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 174726.png" alt="Food Item 2"></td>
+            <td>
+                <h3>2.Chicken confit</h3>
+                <p>In this classic confit, the chicken is salted and seasoned with herbs, then slowly cooked in olive oil to make it rich and tender.</p>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 174834.png" alt="Food Item 3"></td>
+            <td>
+                <h3>3.French onion soup</h3>
+                <p>See out the winter with this fragrant French onion soup. Don’t forget the cheesy croutons.</p>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 175623.png" alt="Food Item 4"></td>
+            <td>
+                <h3>4.Bouillabaisse</h3>
+                <p>This traditional French fish soup is infused with saffron, orange, thyme and chilli.</p>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 180036.png" alt="Food Item 5"></td>
+            <td>
+                <h3>5.Croque monsieur</h3>
+                <p>Only in France could the humble cheese and ham toastie be turned into a gourmet fare. Add a poached or fried egg on top to turn it into the equally stylish croque madame.</p>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 180155.png" alt="Food Item 6"></td>
+            <td>
+                <h3>6.Quiche Lorraine</h3>
+                <p>This quiche Lorraine is one of the most popular recipes on taste.com.au. Originally quiche Lorraine was an open custard pie with smoked bacon. It is only the more modern versions that add cheese to the mix.</p>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 180400.png" alt="Food Item 4"></td>
+            <td>
+                <h3>7.Lamb shank navarin</h3>
+                <p>Navarin is a French lamb ragout (or stew). The lamb is cooked low and slow until it melts in the mouth.</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+```
+Admin.html:
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - French Restaurent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        .banner {
+            background-color: #190a35;
+            padding: 20px;
+            color: white;
+        }
+        .nav-links {
+            list-style-type: none;
+            padding: 0;
+            background-color: #43478e;
+            margin: 0;
+            overflow: hidden;
+        }
+        .nav-links li {
+            display: inline;
+        }
+        .nav-links a {
+            display: inline-block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            background-color: #2a9d8f;
+        }
+        .admin-section {
+            padding: 20px;
+        }
+        .admin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .admin-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .admin-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .admin-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .admin-card p {
+            font-size: 14px;
+            color: #555;
+        }
+        footer {
+            background-color: #264653;
+            color: white;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="banner">
+        <h1>Meet Our Administration</h1>
+        <p>The team behind French Restaurent's success</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <ul class="nav-links">
+        <li><a href="Restaurent.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="administration.html">Administration</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <!-- Administration Section -->
+    <div class="admin-section">
+        <h2>Our Dedicated Team</h2>
+        <div class="admin-grid">
+            <div class="admin-card">
+                <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 183742.png" alt="Admin 1">
+                <h3>VIJAY</h3>
+                <p>C.E.O</p>
+                <p>EMAIL:vijay@gmail.com</p>
+            </div>
+            <div class="admin-card">
+                <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 183841.png" alt="Admin 2">
+                <h3>GORDON RAMSAY</h3>
+                <p>Head Chef</p>
+                <p>EMAIL:GR@gmail.com</p>
+            </div>
+            <div class="admin-card">
+                <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 183938.png" alt="Admin 3">
+                <h3>TOM CRUISE</h3>
+                <p>MENU CURATOR</p>
+                <p>EMAIL:TOM@gmail.com</p>
+            </div>
+            <div class="admin-card">
+                <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 184054.png" alt="Admin 4">
+                <h3>THOMAS SHELBY</h3>
+                <p>MARKETING MANAGER</p>
+                <p>TOMMYSHELBY@gmail.com</p>
+            </div>
+            <div class="admin-card">
+                <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 184424.png" alt="Admin 5">
+                <h3>PEP GUARDIOLA</h3>
+                <p>FINANCE MANAGER</p>
+                <p>EMAIL:PEP@gmail.com</p>
+            </div>
+            <div class="admin-card">
+                <img src="c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-16 184646.png" alt="Admin 6">
+                <h3>LIONEL MESSI</h3>
+                <p>PUBLIC RELATIONS OFFICER</p>
+                <p>EMAIL:LEO@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
+Contact.html:
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - French Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        .banner {
+            background-color: #120a43;
+            padding: 20px;
+            color: white;
+        }
+        .nav-links {
+            list-style-type: none;
+            padding: 0;
+            background-color: #4b3d85;
+            margin: 0;
+            overflow: hidden;
+        }
+        .nav-links li {
+            display: inline;
+        }
+        .nav-links a {
+            display: inline-block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            background-color: #2a9d8f;
+        }
+        .contact-section {
+            padding: 20px;
+        }
+        .contact-details {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 500px;
+            text-align: left;
+        }
+        .contact-details h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .contact-details p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        footer {
+            background-color: #264653;
+            color: white;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="banner">
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you!</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <ul class="nav-links">
+        <li><a href="Restaurent.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="admin.html">Administration</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <h2>Get in Touch</h2>
+        <div class="contact-details">
+            <h2>Our Address</h2>
+            <p>3/2,st.Francisco</p>
+            <p>Paris</p>
+
+            <h2>Phone</h2>
+            <p>9987345358</p>
+
+            <h2>Email</h2>
+            <p><a href="mailto:info@frenchrestaurent.com">info@Frenchrestaurent.com</a></p>
+        </div>
+    </div>
+</body>
+</html>
+```
 
 # OUTPUT:
-![Screenshot 2024-12-06 111515](https://github.com/user-attachments/assets/90500a81-039b-4d67-b0ec-fc745ed75605)
+Home Page:
+
+![Screenshot 2024-12-16 185116](https://github.com/user-attachments/assets/1c9d567f-180f-44c6-98e6-cb21203b966a)
+
+Menu Page:
+
+![Screenshot 2024-12-16 185143](https://github.com/user-attachments/assets/f94c3d5c-f3af-47d0-9409-d714ce85217c)
+
+Admin Page:
+
+![Screenshot 2024-12-16 185202](https://github.com/user-attachments/assets/f8e4b160-940b-403e-bd20-516274900576)
+
+Contact Page:
+
+![Screenshot 2024-12-16 185219](https://github.com/user-attachments/assets/09f33a6e-4990-4bde-adfa-94c693d8c6ca)
+
 
 # RESULT:
 The program for designing software company website using HTML and CSS is completed successfully.
